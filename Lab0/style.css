@@ -1,0 +1,17 @@
+body{
+    background-color: rgb(202, 228, 247);
+}
+.bio{
+    color: midnightblue;
+    text-decoration: underline;
+    font-weight: bold;
+}
+img {
+    border-radius: 50%;
+  }
+h2{
+    color: rgb(4, 49, 134);
+}
+span{
+    font-style: italic;
+}
