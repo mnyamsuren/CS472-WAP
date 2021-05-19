@@ -1,0 +1,37 @@
+body{
+    background-color: rgb(202, 228, 247);
+}
+h1, h2, h3, h4 {
+    display: table;
+    color: rgb(140, 56, 218);
+    font-family: Arial, Arial Black, Verdana, Trebuchet MS,Georgia, Tahoma, Courier New, Times New Roman;
+    text-align: left;
+}
+
+.img_mood {
+    width: 300px;
+    height: 220px;
+}
+
+.class_ongoing {
+    color: rgb(29, 126, 129);
+    font-family: monospace;
+}
+
+.imdb {
+    color: rgb(209, 80, 91);
+    text-decoration: none;
+    font-family: monospace;
+}
+
+p::first-letter {
+    /* text-size-adjust: 3; */
+    font-size: xx-large;
+}
+
+span{
+    font-style: italic;
+}
+dt {
+    color: rgb(244, 248, 7);
+}
