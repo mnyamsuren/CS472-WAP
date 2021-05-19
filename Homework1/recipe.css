@@ -22,7 +22,7 @@ body {
     font-size: 11pt;
     background-image: url("images/silverware.jpg");
     background-attachment: fixed;
-    width: 1024px;
+    /* width: 1024px; */
 }
 
 a {
@@ -34,7 +34,7 @@ a {
     display: table;
     background-color: #FFFFA8;
     margin-left: 40px;
-    width: 920px;
+    width: 90%; 
 }
 
 pre {
