@@ -1,0 +1,132 @@
+/* This is CSS for the moviewReview.html which is homework of w1d3 lesson of CS472 */
+
+/* Overall body style */
+body {
+    background-image: url(./images/background.png);
+    font-size: 8pt;
+    font-family: Verdana, Tahoma, sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+/* Style for top banner, added background images as per instruction */
+#topBanner {
+    text-align: center;
+    background-image: url(./images/bannerbg.png);
+    height: 50px;
+}
+
+/* Style for h1 as per insturction, shaddowed */
+h1 {
+    text-align: center;
+    font-size: 24pt;
+    font-weight: bold;
+    font-family: Tahoma,Verdana, sans-serif;
+    text-shadow: 3px 3px #999999;
+}
+
+/* Overall content area style */
+#contentArea {
+    width: 800px;
+    border: 4px solid gray;
+    margin: auto;
+    border-radius: 20px;
+    overflow: hidden;
+    height: fit-content;
+}
+
+/* Header of critics' review section as per instruction */
+#reviewHeader{
+    width: 550px;
+    background-image: url(./images/rbg.png);
+    height: 83px;
+    font-size: 48pt;
+    color: red;
+    font-weight: bold;
+}
+/* Review header image position */
+#reviewHeader > img{
+    vertical-align: bottom;
+    margin-right: 2px;
+}
+
+/* Overall review section. it has 2 column as div on HTML */
+#reviews {
+    width: 550px;
+    overflow: auto;
+}
+
+/* column style as per instruction */
+.column{
+    width: 47%;
+    margin-left: 1%;
+    margin-right: 1%;
+    float: left;
+}
+
+/* review's style as per instruction */
+.review{
+    font-size: 8pt;
+    font-weight: bold;
+    background-color: #E8DC9B;
+    border: 2px gray solid;
+    border-radius: 10px;
+    padding: 8px;
+    overflow: auto;
+}
+/* image position */
+.review > img{
+    float: left;
+    margin-right: 5px;
+}
+
+/* publication info, including space between publication */
+.reviewer {
+    overflow: auto;
+    margin-bottom: 20pt;
+}
+.reviewer > img {
+    float: left;
+    margin-right: 5px;
+}
+.reviewer > span {
+    font-style: italic;
+}
+/* General overview of the movie as per instruction */
+#rightBanner{
+    width: 250px;
+    float: right;
+    background-color: #A2B964;
+    font-family: Arial,sans-serif;
+    font-size: 8pt;
+    /* font-weight: bold; */
+}
+
+dl{
+    padding: 10pt;
+}
+
+dt {
+    font-weight: bold;
+}
+
+dd{
+    padding-bottom: 10pt;
+}
+
+#posterFooter{
+    clear: both;
+}
+#posterFooter{
+    background-color: #A2B964;
+    text-align: center;
+    padding: 5px;
+    margin-bottom: 0px;
+}
+
+#validation{
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    opacity: 0.5;
+}
