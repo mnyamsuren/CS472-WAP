@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>NerdLuv</title>
+    <meta charset="utf-8" />
+    <meta name="referer" content="origin-when-cross-origin">
+    <link type="text/css" rel="stylesheet" href="nerdluv.css"/>
+</head>
+
+<body>
+    <div class="container">
+        <img src="images/nerdluv.png" alt="logo" />
+        <p class="logo">where meek geeks meet</p>
+
+        <form id="form_signup" action="signup.php">
+            <div class="form_title">New User Signup:</div>
+            <div>
+                <label class="input_head" for="name">Name:</label>
+                <input class="input_16ch_long" type="text" name="name" />
+            </div>
+            <div>
+                <label class="input_head" for="gender">Gender:</label>
+                <input type="radio" name="gender" value="male" id="male">
+                <label for="male">Male</label>
+                <input type="radio" name="gender" value="female" id="female">
+                <label for="female">Female</label>
+            </div>
+            <div>
+                <label class="input_head" for="age">Age:</label>
+                <input class="input_6ch_long" type="text" name="age" maxlength="2" />
+            </div>
+            <div>
+                <label class="input_head" for="personality_type">Personality type:</label>
+                <input class="input_6ch_long" type="text" name="personality_type" />
+                (<a href="http://www.humanmetrics.com/cgi-win/jtypes2.asp">Don't know your type?</a>)
+            </div>
+            <div>
+                <label class="input_head" for="os">Favorite OS:</label>
+                <select name="os">
+                    <option value="windows">Windows</option>
+                    <option value="macos">Mac OS X</option>
+                    <option value="linux">Linux</option>
+                </select>
+            </div>
+            <div>
+                <label class="input_head" for="seeking_age">Seeking age:</label>
+                <input class="input_6ch_long" type="text" maxlength="2" name="seeking_age_min" placeholder="min" />
+                to
+                <input class="input_6ch_long" type="text" maxlength="2" name="seeking_age_max" placeholder="max" />
+            </div>
+
+            <div>
+                <input class="input_submit" type="submit" value="Sign Up" />
+            </div>
+        </form>
+
+        <div>
+            <p class="text">
+                This page is for single nerds to meet and date each other! Type in your personal information and wait
+                for the nerdly luv to begin! <br>
+                Thank you for using our site.
+            </p>
+            <p>Results and page &copy; Copyright NerdLuv Inc.</p>
+
+            <a href="../index.html" class='go_back_section'>
+                <img id="back_button" src="images/back.gif" alt="back button" />
+                <span> Back to front page</span>
+            </a>
+        </div>
+
+        <div class="validators">
+
+            <a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fmnyamsuren.github.io%2FCS472-WAP%2FLab3%2Fnerdluv.html">
+                <img src="images/w3c-html5.png" alt="html validator">
+            </a>
+                
+            <a href="https://jigsaw.w3.org/css-validator/validator?uri=https%3A%2F%2Fmnyamsuren.github.io%2FCS472-WAP%2FLab3%2Fnerdluv.html&profile=css3svg&usermedium=all&warning=1&vextwarning=&lang=en">
+                <img src="images/w3c-css.png" alt="Valid CSS">
+            </a>
+        
+        </div>
+    </div>
+</body>
+
+</html>
