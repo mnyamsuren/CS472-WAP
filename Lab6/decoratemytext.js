@@ -25,10 +25,7 @@ function enlargeFont() {
     let size = parseInt(textArea.style.fontSize) ? parseInt(textArea.style.fontSize) : 12;
     size += 2;
     textArea.style.fontSize =  size + "pt";
-    if (textArea.style.fontSize=24) {
-        function stopDecoration();
-    }
-
+    
 }
 
 // Function to change text Area text style based on either checkbox is checked or not
