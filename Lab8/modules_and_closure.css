@@ -1,0 +1,25 @@
+body{
+    background-color: rgb(198, 229, 250);
+    color: #404040;
+}
+
+/* div {
+    margin-top: 100px;
+    margin-bottom: 100px;
+} */
+
+label {
+    margin-top: 10px;
+    /* margin-bottom: 100px; */
+}
+
+input {
+    margin-top: 10px;
+    margin-left: 10px;
+    /* position: fixed; */
+}
+
+button, textarea{
+    margin-top: 10px;
+    /* margin-bottom: 100px; */
+}
