@@ -34,7 +34,7 @@ var init = function() {
             div.addClass("puzzlepiece");
             div.css("left", ix + 'px');
             div.css("top", iy + 'px');
-            div.css("backgroundImage", 'url("images/background.jpg")');
+            div.css("backgroundImage", 'url("images/background.jpeg")');
             div.css("backgroundPosition", -x + 'px ' + (-y) + 'px');
             
             div.x = ix;
@@ -44,32 +44,32 @@ var init = function() {
     markAvailSlot();
 };
 
-/*
-init = function() {
-    var puzzleArea = document.getElementById('puzzlearea');
-    var divs = puzzleArea.getElementsByTagName("div");
-      
-    // initialize each piece
-    for (var i=0; i< divs.length; i++) {
-        var div = divs[i];
-        
-        // calculate x and y for this piece
-        var x = ((i % 4) * 100) ;
-        var y = (Math.floor(i / 4) * 100) ;
 
-        // set basic style and background
-        div.className = "puzzlepiece";
-        div.style.left = x + 'px';
-        div.style.top = y + 'px';
-        div.style.backgroundImage = 'url("background.jpg")';
-        div.style.backgroundPosition = -x + 'px ' + (-y) + 'px';
+// init = function() {
+//     var puzzleArea = document.getElementById('puzzlearea');
+//     var divs = puzzleArea.getElementsByTagName("div");
+      
+//     // initialize each piece
+//     for (var i=0; i< divs.length; i++) {
+//         var div = divs[i];
         
-        // store x and y for later
-        div.x = x;
-        div.y = y; 
-    }        
-};
-*/
+//         // calculate x and y for this piece
+//         var x = ((i % 4) * 100) ;
+//         var y = (Math.floor(i / 4) * 100) ;
+
+//         // set basic style and background
+//         div.className = "puzzlepiece";
+//         div.style.left = x + 'px';
+//         div.style.top = y + 'px';
+//         div.style.backgroundImage = 'url("background.jpg")';
+//         div.style.backgroundPosition = -x + 'px ' + (-y) + 'px';
+        
+//         // store x and y for later
+//         div.x = x;
+//         div.y = y; 
+//     }        
+// };
+
 
 var shuffle = function() {
     a = mixArray(a);
