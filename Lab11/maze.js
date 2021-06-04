@@ -1,6 +1,5 @@
 
 var win = false;
-var txt = "Click the 'S' to begin";
 
 $(document).ready(function(){
     $("#maze .boundary").mouseover(lost);
