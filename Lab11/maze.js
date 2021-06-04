@@ -1,8 +1,10 @@
 
 var win = false;
+var txt = "Click the 'S' to begin";
+
 $(document).ready(function(){
-    $("#maze .boundary").mouseover(red);
-    $("#end").mouseover(end);
+    $("#maze .boundary").mouseover(lost);
+    $("#end").mouseover(won);
     $("#start").click(reset);
     $("#maze").mouseleave(out);
 });
@@ -11,19 +13,22 @@ var reset = function (){
     $("#maze .boundary").removeClass("youlose");
     $("#status").text("Started!");
     win = true;
+    document.getElementById("congratzImg").style.display = 'none';
 }
-var red = function (){
+var lost = function (){
     if (win) {
         $("#maze .boundary").addClass("youlose");
         win = false;
-        $("#status").text("Sorry, You lose. :[, Click the 'S' to begin");
+        $("#status").text("Sorry, You lose. :[,");
+
     }
 }
 
-var end = function (){
+var won = function (){
     if (win) {
-        $("#status").text("You win! :], Click the 'S' to begin");
+        $("#status").text("You win! :]");
         win = false;
+        document.getElementById("congratzImg").style.display = 'inline';
     }
 }
 
