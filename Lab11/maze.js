@@ -1,53 +1,36 @@
-window.onload = function() {
-    $("start").onclick = startClick;
-    $("end").onmouseover = overEnd;
-    $("maze").onmouseleave = noCheat;
-    var boundaries = $$("div#maze div.boundary");
-    for (var i = 0; i < boundaries.length; i++) {
-        boundaries[i].onmouseover = overBoundary;
-        boundaries[i].onmousleave = overBoundary;
-    }
-};
 
-function overBoundary() {
-    var x = document.getElementsByClassName("boundary");
+var win = false;
+$(document).ready(function(){
+    $("#maze .boundary").mouseover(red);
+    $("#end").mouseover(end);
+    $("#start").click(reset);
+    $("#maze").mouseleave(out);
+});
 
-    for (var i = 0; i < x.length; i++) {
-        x[i].style.backgroundColor = "red";
-        if (x[i].style.backgroundColor == "red") {
-            var s = document.getElementById("status").innerHTML = "You Lose!";
-        }
+var reset = function (){
+    $("#maze .boundary").removeClass("youlose");
+    $("#status").text("Started!");
+    win = true;
+}
+var red = function (){
+    if (win) {
+        $("#maze .boundary").addClass("youlose");
+        win = false;
+        $("#status").text("Sorry, You lose. :[, Click the 'S' to begin");
     }
 }
 
-function startClick() {
-    var x = document.getElementsByClassName("boundary");
-
-    for (var i = 0; i < x.length; i++) {
-        x[i].style.backgroundColor = "#eeeeee";
-        if (x[i].style.backgroundColor != "red") {
-            var s = document.getElementById("status").innerHTML = "Move your mouse over the 'S' to begin.";
-        }
+var end = function (){
+    if (win) {
+        $("#status").text("You win! :], Click the 'S' to begin");
+        win = false;
     }
 }
 
-function overEnd() {
-    var x = document.getElementsByClassName("boundary");
-
-    for (var i = 0; i < x.length; i++) {
-        if (x[i].style.backgroundColor != "red") {
-            var s = document.getElementById("status").innerHTML = "You win!";
-        }
+var out = function (){
+    if (win) {
+        $("#status").text("Click the 'S' to begin");
+        win = false;
     }
 }
-
-function noCheat() {
-    var x = document.getElementsByClassName("boundary");
-
-    for (var i = 0; i < x.length; i++) {
-        x[i].style.backgroundColor = "red";
-        if (x[i].style.backgroundColor == "red") {
-            var s = document.getElementById("status").innerHTML = "Nice Try...";
-        }
-    }
-}
+ 
