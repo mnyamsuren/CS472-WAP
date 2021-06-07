@@ -1,0 +1,19 @@
+body {
+    margin: 0px;
+  }
+  h2 {
+    background-color: rgb(221, 221, 221);
+    margin: 0px;
+    padding: 5px;
+  }
+  .form {
+    background-color: rgb(238, 238, 238);
+    padding: 5px;
+  }
+  div.content {
+    height: 80%;
+    padding: 5px;
+  }
+  div.verif {
+    text-align: right;
+  }
