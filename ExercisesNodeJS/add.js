@@ -1,13 +1,13 @@
 var http = require('http');
 var url = require('url');
 var fs = require('fs');
-var addmod = require('./Lab12/myModule');
+var addmod = require('./myModule');
 
 http.createServer(function (req, res) {
     var q = url.parse(req.url, true);
-    var filename = "./Lab12" + q.pathname;
+    var filename = "." + q.pathname;
 
-    if (q.pathname=="/Lab12/add.js")
+    if (q.pathname=="/add.js")
         addmod.add(req,res,q.query)
     else
         fs.readFile(filename, function(err, data) {
@@ -19,4 +19,4 @@ http.createServer(function (req, res) {
             res.write(data);
             return res.end();
         });
-}).listen(8000);
+}).listen(8080);

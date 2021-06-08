@@ -8,7 +8,7 @@ exports.add = function (req,res,vals) {
     res.write("<!DOCTYPE html>");
     res.write("<html>");
     res.write("<head><meta charset=\"utf-8\"/>");
-    res.write("<title>Calculator Web Site</title>");
+    res.write("<title>Addition</title>");
     res.write("</head>");
     res.write("<body>");
     res.write("<p>The sum is: ");
