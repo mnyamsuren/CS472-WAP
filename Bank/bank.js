@@ -3,8 +3,10 @@ $(document).ready(function() {
     $(document).ajaxStart(function(){$("#loader").show();})
                .ajaxStop(function(){$("#loader").hide();});
 
-    $("#lookUp").click(function(){
-        var word = $("input[name='word']").val();
+    $("#find").click(function(){
+        
+        var searchVal = $("input[name='search']").val();
+        var field = $("#field option:selected").val();
 
         //Examples of taking values
         // let gender = $("input[name='gender']:checked").val();
@@ -14,10 +16,10 @@ $(document).ready(function() {
 
         $.ajax({
             headers: { "Accept": "application/json"},
-            url: "http://localhost:8080/dictionary",
+            url: "http://localhost:8080/bank",
             type: "GET",
             //type: "POST",
-            data: {"word":word},
+            data: {"field":field,"value":searchVal},
             beforeSend: function(xhr){
                 xhr.withCredentials = true;
             },
@@ -30,12 +32,16 @@ $(document).ready(function() {
 function ajaxSuccess(data){
     $('#content').empty();
     var resultHTML="";
-    for(let i=0;i<data.length;i++){        
-        resultHTML = resultHTML + "<div><p>" + (i+1) + "(" + data[i].wordtype + ") " + data[i].definition + "</p></div>";
-    }
-    if(resultHTML===""){
+    if (data.length>0){
+        resultHTML = "<table style='width:50%'><tr><th>Name</th><th>Account</th><th>Balance</th></tr>";
+        
+        for(let i=0;i<data.length;i++){        
+            resultHTML = resultHTML + "<tr><td>" + data[i].name + "</td><td>" + data[i].number + "</td><td>" + data[i].balance + "</td></tr>";
+        }
+    } else {
         resultHTML = "<div><p>Not found</p></div>";
     }
+    
     $("#content").append(resultHTML);
 }
 
