@@ -3,10 +3,15 @@ $(document).ready(function() {
     $(document).ajaxStart(function(){$("#loader").show();})
                .ajaxStop(function(){$("#loader").hide();});
 
-    $("#find").click(function(){
+    $("#submit").click(function(){
         
         var searchVal = $("input[name='search']").val();
         var field = $("#field option:selected").val();
+
+        var user = $("input[name='user']").val();
+        var account = $("input[name='account']").val();
+        var amount = $("input[name='amount']").val();
+        var operation = $("#operation option:selected").val();
 
         //Examples of taking values
         // let gender = $("input[name='gender']:checked").val();
@@ -17,12 +22,12 @@ $(document).ready(function() {
         $.ajax({
             headers: { "Accept": "application/json"},
             url: "http://localhost:8080/bank",
-            type: "GET",
-            //type: "POST",
-            data: {"field":field,"value":searchVal},
-            beforeSend: function(xhr){
-                xhr.withCredentials = true;
-            },
+            //type: "GET",
+            type: "POST",
+            data: {"user":user, "account":account, "amount":amount, "oper":operation},
+            // beforeSend: function(xhr){
+            //     xhr.withCredentials = true;
+            // },
             success: ajaxSuccess,
             error: ajaxFailure
         });
@@ -33,7 +38,7 @@ function ajaxSuccess(data){
     $('#content').empty();
     var resultHTML="";
     if (data.length>0){
-        resultHTML = "<table style='width:50%'><tr><th>Name</th><th>Account</th><th>Balance</th></tr>";
+        resultHTML = "<table><tr><th>Name</th><th>Account</th><th>Balance</th></tr>";
         
         for(let i=0;i<data.length;i++){        
             resultHTML = resultHTML + "<tr><td>" + data[i].name + "</td><td>" + data[i].number + "</td><td>" + data[i].balance + "</td></tr>";
